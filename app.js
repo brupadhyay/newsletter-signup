@@ -6,6 +6,10 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+var token = config.MY_API_TOKEN; //apikey
+var key = config.SECRET_API_KEY; //list id
+var x = config.X;
+
 app.get("/", (req,res) => {
     res.sendFile(__dirname + "/signup.html");
 });
@@ -31,12 +35,13 @@ app.post("/", (req, res) => {
     }
     const jsonData = JSON.stringify(data);
 
-    const url = "https://us14.api.mailchimp.com/3.0/lists/db4fa46136";
+    const url = "https://us" + x + ".api.mailchimp.com/3.0/lists/"+ key;
 
     const options = {
         method: "POST",
-        auth: "bhavesh:90cfd3fbc133c97c34e07d97c0a58ec6-us14"
+        auth: "bhavesh:" + token 
     }
+    
 
     const request = https.request(url, options, function (response) {
         
