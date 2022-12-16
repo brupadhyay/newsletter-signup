@@ -37,7 +37,8 @@ app.post("/", (req, res) => {
 
     const options = {
         method: "POST",
-        auth: "bhavesh:90cfd3fbc133c97c34e07d97c0a58ec6-us14"
+        auth: "bhavesh:SECRET_API_KEY"
+        
     }
     
 
@@ -66,9 +67,3 @@ app.listen( process.env.PORT || 3000, function (){
     console.log("Server is running on port 3000");
 });
 
-
-//API KEY
-// 90cfd3fbc133c97c34e07d97c0a58ec6-us14
-
-//list id
-// db4fa46136
