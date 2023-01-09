@@ -37,7 +37,7 @@ app.post("/", (req, res) => {
 
     const options = {
         method: "POST",
-        auth: "bhavesh:SECRET_API_KEY"
+        auth: "bhavesh:process.env.SECRET_API_KEY"
         
     }
     
