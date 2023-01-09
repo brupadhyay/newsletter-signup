@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-require('dotenv').config()
+require('dotenv').config() //to use the variables from env via process.env
 
 
 

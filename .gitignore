@@ -1,0 +1,2 @@
+#api keys stored and accessed using dotenv npm package
+.env
