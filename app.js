@@ -39,7 +39,7 @@ app.post("/", (req, res) => {
 
     const options = {
         method: "POST",
-        auth: "bhavesh:process.env.SECRET_API_KEY" 
+        auth: "bhavesh:" + process.env.key
         
     }
     
@@ -67,5 +67,6 @@ app.post("/failure", (req,res) => {
 
 app.listen( 3000, function (){
     console.log("Server is running on port 3000 and do test");
+    console.log(process.env.key)
 });
 
